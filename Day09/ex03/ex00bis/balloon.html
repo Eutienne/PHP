@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Javascript</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<style>
+div {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 200px;
+	width: 200px;
+	background-color: red;
+	border-radius: 50%;
+}
+div .active {
+	background:blue;
+}
+
+		</style>
+	</head>
+	<body>
+		<div id="color"></div>
+		<script>
+
+			var change_color = $("#color");
+			var i = 0;
+
+change_color.click(function(){
+	var width = change_color.width() + 10;
+	var height = change_color.height() + 10;
+	var color = ["green", "blue", "red"];
+
+	if (width > 420)
+	{
+		width = 200;
+		height = 200;
+	}
+	change_color.css("background-color", color[i]);
+	i++;
+	if (i > 2)
+		i = 0;
+	change_color.width(width);
+	change_color.height(height);
+})
+change_color.mouseleave(function(){
+	var width = change_color.width() - 5;
+	var height = change_color.height() - 5;
+	var color = ["red", "green", "blue"];
+
+	if(width < 200)
+	{
+		width = 200;
+		height = 200;
+	}
+
+	i--;
+	if (i < 0)
+		i = 2;
+
+	change_color.css("background-color", color[i]);
+	change_color.width(width);
+	change_color.height(height);
+})</script>
+
+	</body>
+</html>

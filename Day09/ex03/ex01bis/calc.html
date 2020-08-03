@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Calculator</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script type="text/javascript">
+function fn1()
+{
+	var str = $("#text1").val();
+	var str2 = $("#text2").val();
+	var op = $("#opper").val();
+	var total = -1;
+
+	if (str < 0 || str2 < 0)
+		alert("Error :(");
+	else if (op == '+')
+		total = str*1 + str2*1;
+	else if (op == '-')
+		total = str*1 - str2*1;
+	else if (op == '*')
+		total = str*1 * str2*1;
+	else if (op == '/' && str2 > 0)
+		total = str*1 / str2*1;
+	else if (op == '%' && str2 > 0)
+		total = str*1 % str2*1;
+	else
+	{
+		console.log("It’s over 9000!");
+		alert("It’s over 9000!")
+	}
+
+	if (total > -1)
+	{
+		console.log(total);
+		alert(total);
+	}
+}
+setInterval(function(){
+	alert("Please, use me...")}
+, 30000);
+
+		</script>
+	</head>
+	<body>
+		<input id="text1" placeholder="give a number">
+		<br>
+		<br>
+		<select id="opper">
+			<option>+</option>
+			<option>-</option>
+			<option>/</option>
+			<option>*</option>
+			<option>%</option>
+		</select>
+		<br>
+		<br>
+		<input id="text2" placeholder="give a number">
+		<br>
+		<br>
+		<button onclick="fn1()" id="btn1">Try me!</button>
+	</body>
+</html>
+

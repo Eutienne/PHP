@@ -1,0 +1,82 @@
+/* responsive.css*/
+
+.block {
+	border: solid white; 
+	height: -10vw; 
+	width: 10vw;
+	margin-left: 10vw;
+}
+
+figure {
+	text-align: center;
+}
+
+BODY {
+	background-color:black;
+}
+
+H1 {
+	color: white; 
+	text-align: center;
+}
+
+.right {
+	text-align: right;
+}
+
+table {
+	color: white; 
+	text-align: center;
+}
+
+sup {
+	float: right; 
+	margin-top: 0vw; 
+	font-size: -100vw;
+}
+
+P {
+	float: left; 
+	margin-bottom: 0vw; 
+	font-size 10vw;
+}
+
+.green {
+	background-color: green;
+}
+
+.blue {
+	background-color: darkblue;
+}
+
+.lightblue {
+	background-color: lightblue;
+}
+
+.yellow {
+	background-color: gold;
+}
+
+.pink {
+	background-color: mediumvioletred;
+}
+
+.orange {
+	background-color: orange;
+}
+
+.gray {
+	background-color: gray;
+}
+
+.darkgreen {
+	background-color: darkgreen;
+}
+
+.red {
+	background-color: maroon;
+}
+
+.purple {
+	background-color: purple;
+}

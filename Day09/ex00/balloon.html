@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Javascript</title>
+		<style>
+div {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 200px;
+	width: 200px;
+	background-color: red;
+	border-radius: 50%;
+}
+div .active {
+	background:blue;
+}
+
+		</style>
+	</head>
+	<body>
+		<div id="color"></div>
+		<script>
+
+			var change_color = document.getElementById("color");
+var i = 0;
+
+change_color.addEventListener("click", function(){
+	var width = change_color.offsetWidth + 10;
+	var height = change_color.offsetHeight + 10;
+	var color = ["green", "blue", "red"];
+
+	if (width > 420)
+	{
+		width = 200;
+		height = 200;
+	}
+	change_color.style.background = color[i];
+	i++;
+	if (i > 2)
+		i = 0;
+	change_color.style.width = width + 'px';
+	change_color.style.height = height + 'px';
+})
+change_color.addEventListener("mouseout", function(){
+	var width = change_color.offsetWidth - 5;
+	var height = change_color.offsetHeight - 5;
+	var color = ["red", "green", "blue"];
+
+	if(width < 200)
+	{
+		width = 200;
+		height = 200;
+	}
+		
+	i--;
+	if (i < 0)
+		i = 2;
+
+	change_color.style.background = color[i];
+	change_color.style.width = width + 'px';
+	change_color.style.height = height + 'px';
+})</script>
+
+	</body>
+</html>
